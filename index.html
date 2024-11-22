@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel arrior</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- custom js file link  -->
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"><span>N</span>asa <span>W</span>orld <br ><span>T</span>ravel & <span>T</span>ours
+        </a>
+
+        <nav class="navbar">
+            <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">home</a>
+            <a data-aos="zoom-in-left" data-aos-delay="450" href="#about">about us</a>
+            <a data-aos="zoom-in-left" data-aos-delay="750" href="#services">services</a>
+            <a data-aos="zoom-in-left" data-aos-delay="600" href="#destination">destination</a>
+            <a data-aos="zoom-in-left" data-aos-delay="900" href="#gallery">gallery</a>
+            <a data-aos="zoom-in-left" data-aos-delay="1150" href="#blogs">blogs</a>
+        </nav>
+
+        <a data-aos="zoom-in-left" data-aos-delay="1300" href="#book-form" class="btn">book now</a>
+
+    </header>
+
+    <!-- header section ends -->
+<br><br>
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <span data-aos="fade-up" data-aos-delay="150">Let's Start</span>
+            <h3 data-aos="fade-up" data-aos-delay="300">Tour With Us</h3>
+            <p data-aos="fade-up" data-aos-delay="450">Explore Malaysia, Asia, Europe, Australia, and New Zealand with Nasa World Travels and Tours – your passport to unforgettable adventures!</p>
+            <a data-aos="fade-up" data-aos-delay="600" href="#" class="btn">book now</a>
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+<!-- booking form section starts -->
+
+<section class="book-form" id="book-form">
+
+    <form id="bookingForm" onsubmit="sendEmail(event)">
+        <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+            <span>you are planning?</span>
+            <input type="text" id="placeName" placeholder="place name" required>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+            <span>When looking for?</span>
+            <input type="date" id="date" required>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+            <span>Total members?</span>
+            <input type="number" id="members" placeholder="number of travelers" required>
+        </div>
+        <input data-aos="zoom-in" data-aos-delay="600" type="submit" value="book now" class="btn">
+    </form>
+
+</section>
+
+<!-- booking form section ends -->
+
+<script>
+    function sendEmail(event) {
+        event.preventDefault(); // Prevent the form from submitting the default way
+
+        // Fetch form values
+        const placeName = document.getElementById('placeName').value;
+        const date = document.getElementById('date').value;
+        const members = document.getElementById('members').value;
+
+        // Construct the email body
+        const subject = encodeURIComponent("Booking Details");
+        const body = encodeURIComponent(`You are planning: ${placeName}\nWhen looking for: ${date}\nTotal members: ${members}`);
+
+        // Open the user's email client with the pre-filled details
+        window.location.href = `mailto:nasaworldtraveltours@gmail.com?subject=${subject}&body=${body}`;
+    }
+</script>
+
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <div class="video-container" data-aos="fade-right" data-aos-delay="300">
+            <img src="https://malaysiatourism.in/wp-content/uploads/where-is-malaysia-located-on-world-map-distance-header-1568x1045.jpg" class="video"></img>
+        </div>
+
+        <div class="content" data-aos="fade-left" data-aos-delay="600">
+            <span>Who we are ?</span>
+            <h3>A smiling agent for you</h3>
+            <p>At Nasa World Travels and Tours, we specialize in crafting unforgettable journeys across Malaysia, Asia, Europe, Australia, and New Zealand, delivering personalized travel experiences with exceptional service and expert guidance.</p>
+            <a href="#book-form" class="btn">book now</a>
+        </div>
+
+    </section>
+
+    <!-- about section ends -->
+
+
+
+    <!-- services section starts  -->
+
+    <section class="services" id="services">
+
+        <div class="heading">
+            <span>our services</span>
+            <h1>Cost Effective</h1>
+        </div>
+
+        <div class="box-container">
+
+            
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <i class="fas fa-hiking"></i>
+                <h3>adventures</h3>
+                <p>Unleash your adventurous spirit with unforgettable journeys, thrilling destinations, and experiences beyond the ordinary!</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+                <i class="fas fa-utensils"></i>
+                <h3>food & drinks</h3>
+                <p>Savor global flavors and local delights with curated food and drink experiences on every journey!</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
+                <i class="fas fa-hotel"></i>
+                <h3>affordable hotels</h3>
+                <p>Find your perfect stay with unbeatable prices on comfortable hotels, crafted for every budget traveler.</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
+                <i class="fas fa-wallet"></i>
+                <h3>affordable price</h3>
+                <p>Discover the world without breaking the bank – unbeatable travel experiences at the most affordable prices!</p>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 support</h3>
+                <p>Experience seamless travel with our dedicated 24/7 support—here for you anytime, anywhere, always.</p>
+            </div>
+            
+
+               
+        </div>
+
+    </section>
+
+    <!-- services section ends -->
+
+
+    <!-- destination section starts  -->
+
+    <section class="destination" id="destination">
+
+        <div class="heading">
+            <span>our destination</span>
+            <h1>Keep looking up</h1>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
+                <div class="image">
+                    <img src="https://malaysiatourism.in/wp-content/uploads/where-is-malaysia-located-on-world-map-distance-header.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Malaysia</h1><br>
+                    <a href="#book-form">book now <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <div class="image">
+                    <img src="https://www.exotravel.com/blog/wp-content/uploads/2018/01/9-photo-collages.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Asia</h1><br>
+                    <a href="#book-form">book now <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <div class="image">
+                    <img src="https://www.shutterstock.com/image-illustration/vintage-travel-background-retro-photos-600nw-1936008868.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h1>Europe</h1><br>
+                    <a href="#book-form">book now <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <div class="image">
+                    <img src="https://www.shutterstock.com/image-photo/sydney-harbour-opera-house-cityscape-600nw-2495680553.jpg" alt="">
+                </div>
+                <div class="content">
+                    
+                    <h1>Australia</h1><br>
+                    <a href="#book-form">book now <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
+                <div class="image">
+                    <img src="https://plus.unsplash.com/premium_photo-1661882021629-2b0888d93c94?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmV3JTIwemVhbGFuZHxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                </div>
+                <div class="content">
+                    
+                    <h1>New Zealand</h1><br>
+                    <a href="#book-form">book now <i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <!-- destination section ends -->
+
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="heading">
+            <span>our gallery</span>
+            <h1>Memories last forever</h1>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <img src="https://i.natgeofe.com/n/1690f081-f44f-4fbe-a1b6-9123819b737c/petronas-kualalumpur-malaysia_3x4.jpg" alt="">
+                <span>travel spot</span>
+                <h3>Kuala Lumpur</h3>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <img src="https://static.wanderon.in/wp-content/uploads/2023/10/gondola-ride-in-autumn-in-kashmir-2023-10-18t174214.790-min.png" alt="">
+                <span>travel spot</span>
+                <h3>Maldives</h3>
+            </div>
+
+    
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <img src="images/gallery-img-4.png" alt="">
+                <span>travel spot</span>
+                <h3>thailand</h3>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <img src="https://burst.shopifycdn.com/photos/the-eiffel-tower-paris.jpg?width=1200&format=pjpg&exif=0&iptc=0" alt="">
+                <span>travel spot</span>
+                <h3>Paris</h3>
+            </div>
+
+            
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+                <img src="https://static01.nyt.com/images/2023/11/30/multimedia/36-hours-melbourne-02-cqjw/36-hours-melbourne-02-cqjw-mobileMasterAt3x-v2.jpg" alt="">
+                <span>travel spot</span>
+                <h3>Melbourne</h3>
+            </div>
+
+            <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+                <img src="https://www.zicasso.com/static/1613b7fe4e02309dcd902b3f19405262/304cc/1613b7fe4e02309dcd902b3f19405262.jpg" alt="">
+                <span>travel spot</span>
+                <h3>New Zealand</h3>
+            </div>
+
+           
+
+        </div>
+
+    </section>
+
+    <!-- gallery section ends -->
+
+   <!-- review section starts  -->
+
+   <section class="review">
+
+    <div class="box-container" data-aos="fade-right" data-aos-delay="300">
+
+        <div class="box">
+            <p>This was our first time traveling with this company, and it won’t be the last! The accommodations were luxurious, and every detail was handled professionally. We felt so well taken care of.</p>
+            <div class="user">
+                <img src="images/pic-1.png" alt="">
+                <div class="info">
+                    <h3>Matteo</h3>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <p>Our trip was beyond incredible! The itinerary was perfectly planned, and the tour guides were knowledgeable and friendly. Every destination felt like a new adventure. Highly recommend!</p>
+            <div class="user">
+                <img src="images/pic-2.png" alt="">
+                <div class="info">
+                    <h3>Sophia</h3>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <p>This was our first time traveling with this company, and it won’t be the last! The accommodations were luxurious, and every detail was handled professionally. We felt so well taken care of.</p>
+            <div class="user">
+                <img src="images/pic-3.png" alt="">
+                <div class="info">
+                    <h3>john deo</h3>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <p>I can’t express how much we loved this trip! Every destination was more beautiful than the last. The local guides were friendly, and we learned so much about each place. Everything was perfect.</p>
+            <div class="user">
+                <img src="images/pic-4.png" alt="">
+                <div class="info">
+                    <h3>Eliana</h3>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="content" data-aos="fade-left" data-aos-delay="600">
+        <span>testimonials</span>
+        <h3>good news from our clients</h3>
+        <p>From the moment we booked until the end of our trip, everything was seamless. The activities were fun, and we got to experience authentic culture and cuisine. Truly a once-in-a-lifetime experience!</p>
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+    <!-- banner section starts  -->
+
+    <div class="banner">
+
+        <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+            <span>start your adventures</span>
+            <h3>Let's Explore With Us</h3>
+            <p>Explore Malaysia, Asia, Europe, Australia, and New Zealand with Nasa World Travels and Tours – your passport to unforgettable adventures!</p>
+            <a href="#book-form" class="btn">book now</a>
+        </div>
+
+    </div>
+
+    <!-- banner section ends -->
+
+    <!-- blogs section starts  -->
+
+    <section class="blogs" id="blogs">
+
+        <div class="heading">
+            <span>blogs & posts</span>
+            <h1>Experience in words</h1>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
+                <div class="image">
+                    <img src="https://static2.tripoto.com/media/filter/tst/img/210609/TripDocument/1474116741_destination_for_malaysian_24343.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">One Mile At A Time.</a>
+                    <p>Unveiling Malaysia: Top Attractions for Your Next Adventure</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i> 21st Nov, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i> by admin</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <div class="image">
+                    <img src="https://i.natgeofe.com/n/075e4f53-f271-4f7a-855a-5eccdba43587/01_Europe.jpg?w=2880&h=1920" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">Local Adventurer</a>
+                    <p>Experience Europe's Charm: Must-Visit Destinations This Year</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i> 21st Nov, 2024/a>
+                        <a href="#"><i class="fas fa-user"></i> by admin</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
+                <div class="image">
+                    <img src="https://www.telegraph.co.uk/content/dam/travel/2022/03/16/TELEMMGLPICT000215849273_trans_NvBQzQNjv4Bq8juO8C_Vdx2cT20LARTibnFLfv0ucAwTrkjYdq767p4.jpeg?imwidth=680" alt="">
+                </div>
+                <div class="content">
+                    <a href="#" class="link">The Blonde Abroad</a>
+                    <p>Exploring New Zealand: A Paradise for Nature Lovers Everywhere</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i> 21st Nov, 2024</a>
+                        <a href="#"><i class="fas fa-user"></i> by admin</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- blogs section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
+                <a href="#" class="logo"> <span>T</span>ravel <span>W</span>arrior </a>
+                <p>Explore Malaysia, Asia, Europe, Australia, and New Zealand with Nasa World Travels and Tours – your passport to unforgettable adventures!</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="300">
+                <h3>quick links</h3>
+                <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="#about" class="links"> <i class="fas fa-arrow-right"></i> about </a>
+                <a href="#destination" class="links"> <i class="fas fa-arrow-right"></i> destination </a>
+                <a href="#services" class="links"> <i class="fas fa-arrow-right"></i> services </a>
+                <a href="#gallery" class="links"> <i class="fas fa-arrow-right"></i> gallery </a>
+                <a href="#blogs" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="450">
+                <h3>contact info</h3>
+                <p> <i class="fas fa-map"></i> Kuala Lumpur, Malayasia </p>
+                <p> <i class="fas fa-phone"></i> +60 39-108 1451 </p>
+                <p> <i class="fas fa-envelope"></i> nasaworldtraveltours@gmail.com </p>
+                <p> <i class="fas fa-clock"></i> 7:00am - 10:00pm </p>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-delay="600">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="">
+                    <input type="email" name="" placeholder="enter your email" class="email" id="">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="credit">Nasa World<span> Travel & Tours </span> | all rights reserved!</div>
+
+    <!-- footer section ends -->
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+
+        AOS.init({
+            duration: 800,
+            offset: 150,
+        });
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
